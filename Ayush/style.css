@@ -1,0 +1,672 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1px;
+    position: relative;
+}
+/* ******************************************************************************Navbar******************************************************* */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.7rem;
+    background-color: rgb(229, 77, 11);
+    padding: 0 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar h1{
+    color: white;
+}
+
+.navbar .links{
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.navbar .links a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+   
+}
+
+.navbar .links a:hover{
+   color: white;
+}
+
+.navbar .login-account-button .login-Signup{
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.navbar .login-account-button .accounts-box{
+    display: none;
+    position: relative;
+}
+
+.navbar .login-account-button .accounts-box .accounts{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+}
+
+.navbar .login-account-button .accounts-box .accounts i{
+    font-size: 1.5rem;
+}
+.navbar .login-account-button .accounts-box .accounts p{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.navbar .login-account-button .accounts-box .accounts-submenu{
+    
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 122%;
+    background-color: rgb(229, 77, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.navbar .login-account-button .accounts-box .accounts-submenu .logout-main{
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* Hamburger  */
+
+.hamburger{
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    display: none;
+    transition: all 0.2s linear;
+    
+}
+
+#cross{
+    display: none;
+}
+
+.hamburger .submenu{
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 140%;
+    right: 0;
+    background-color: rgb(229, 77, 11);
+    display: none;
+}
+.hamburger .submenu a{
+    text-decoration: none;
+    font-size: 1rem; 
+    display: block;
+    border-bottom: 1px solid #f9f9f9;
+    width: 100%;
+    padding: 0.5rem 0 ;
+    padding-left: 1rem;
+    color: black;
+    font-weight: 700;
+    
+}
+
+.hamburger .submenu a:hover{
+    border-left: 0.3125rem solid black;
+    padding-left: 0.6875rem;
+}
+.hamburger .submenu button{
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+.hamburger .submenu a .accounts-box{
+    position: relative;
+}
+
+.hamburger .submenu a .accounts-box .accounts-small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    display: none;
+}
+
+.hamburger .submenu a .accounts-box .accounts-small i {
+    font-size: 1.5rem;
+}
+.hamburger .submenu a .accounts-box .accounts-submenu-small{
+    width: 114%;
+    position: absolute;
+    top: 130%;
+    height: 40px;
+    border: 1px solid red;
+    right: 0;
+    background-color: rgb(229, 77, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #f9f9f9;  
+    display: none;
+    
+}
+
+
+
+/* Signup-form */
+
+.sign-up-form{
+    position: absolute;
+    top: -0.7px;
+    width: 100%;
+    height: 99.95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.529);
+    display: none;
+    animation-name: animate;
+    animation-duration: 0.5s;
+    
+}
+
+.sign-up-form form{
+    
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    background-color: rgb(255, 64, 0);
+    box-shadow: 0 0 0.8rem white;
+}
+
+.sign-up-form form .head-cross{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sign-up-form form .head-cross #Signup-cross{
+    font-size: 2rem;
+    padding-right: 0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+.sign-up-form form h1{
+    font-weight: 900;
+    font-style: italic;
+    width: 90%;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+.sign-up-form form input{
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.sign-up-form form button{
+    border-radius: 16px;
+    padding: 0.4rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    margin-bottom: 1rem;
+    transition: all 0.2s;
+}
+
+.sign-up-form form button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+@keyframes animate {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* *********************************************************************Main-section********************************************************** */
+main{
+    height: 100%;
+    width: 100%;
+    padding: 0;  
+    overflow-x: hidden; 
+}
+/* background  image */
+main .bgc{
+    height: 100%;
+    width: 100%;
+    
+}
+main .bgc img{
+    height: 100%;
+    width: 100%;
+}
+
+/* DOnation-feild */
+main .content {
+    width: 100%;
+    background-color:  rgb(8, 22, 53);
+    text-align: center;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .content h1{
+    color: rgb(255, 99, 71);
+    margin-bottom: 0.4rem;
+}
+main .content hr{
+    width: 150px;
+    height: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: #e20000;
+    border: none;
+}
+
+main .content .donation-boxes{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    padding: 2rem 4rem;
+    
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+main .content .donation-boxes .boxes{
+    width: 250px;
+    padding: 1rem 1rem 0.5rem;
+    border: 2px solid white;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .content .donation-boxes .boxes #main-images{
+    width: 100%;
+    height: 200px;
+}
+
+main .content .donation-boxes .boxes h1{
+    font-weight: 700;
+    color: rgb(177, 188, 205);
+    margin: 0.2rem 0 1rem ;
+}
+
+main .content .donation-boxes .boxes p{
+    font-size: 1.1rem;
+    color:rgb(87, 106, 132);
+    font-weight: 700;
+}
+
+/* main .content .donation-boxes .boxes button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.2rem;
+    background-color: rgb(202, 222, 249);
+    margin-top: 1rem ;
+    cursor: pointer;
+}
+
+main .content .donation-boxes .boxes button img{
+    width: 2rem;
+    height: 2rem;
+
+}
+main .content .donation-boxes .boxes button h3{
+    margin: 0.2rem 0;
+}
+main .content .donation-boxes .boxes button p{
+    font-size: 0.8rem;
+    font-style: italic;
+} */
+
+main .content .donation-boxes .boxes button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(202, 222, 249);
+    margin-top: 1rem ;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+main .content .donation-boxes .boxes button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* footer section */
+footer{
+    width: 100%;
+    background-color: rgb(20, 37, 63);
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2rem;
+    padding:2rem 0 1rem;
+}
+
+footer .image-email img{
+    width: 100px;
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+footer .image-email p{
+    color: white;
+}
+
+footer .spark {
+    display: flex;
+    flex-direction: column; 
+}
+
+footer .spark h2{
+    margin-left: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    
+}
+footer .spark hr{
+    width: 120px;
+    margin: 0.5rem 0 0.8rem;
+    height: 2px ;
+    background-color: #e20000;
+    border: none;
+}
+
+footer .spark .spark-link{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .spark .spark-link a{
+    text-decoration: none;
+    color: #52647f;
+    margin-bottom: 0.1rem;
+}
+
+footer .spark .spark-link a:hover{
+    color: white;
+}
+
+
+
+/* Donate Page */
+
+.donate-page{
+    
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.529);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation-name: animate;
+    animation-duration: 0.5s;
+
+}
+
+.donate-page .donate-box{
+    width: 400px;
+    box-shadow: 0 0 0.8rem white;
+}
+
+.donate-page .donate-box .head-and-close{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 22, 53);
+    padding: 7px 10px 10px;
+    color: white;
+}
+
+.donate-page .donate-box .head-and-close i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.donate-page .donate-box .heading-and-line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(8, 22, 53);
+}
+.donate-page .donate-box  .heading-and-line h1{
+    padding: 10px 0 10px 0 ;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;  
+    color: white;
+}
+
+.donate-page .donate-box .heading-and-line hr{
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-bottom: 16px;
+}
+
+
+.donate-page .donate-box  .input-and-greet{
+   
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 10px 0;
+    row-gap: 2rem;
+    height: 250px;
+    text-align: center;
+    background-color: rgb(8, 22, 53);
+}
+
+.donate-page .donate-box  .input-and-greet input{
+    font-size: 1rem;
+    width: 80%;
+    padding: 5px 10px;
+    margin-top: 16px;
+    border-radius: 10px;
+    border: none;
+    
+}
+
+.donate-page .donate-box  .input-and-greet p{
+    
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 5rem;
+    color: white;
+    display: none;
+}
+
+.donate-page .donate-box  .amount-box-and-payNow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    box-shadow: 0 0 5px white;
+    background-color: rgb(8, 22, 53);
+}
+
+.donate-page .donate-box  .amount-box-and-payNow .amount-box{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.donate-page .donate-box  .amount-box-and-payNow .pay-now-button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.2rem;
+    background-color: rgb(202, 222, 249);
+    border-radius: 5px;
+    border: none;
+    border: 0.5px solid black;
+    cursor: pointer;
+}
+.donate-page .donate-box  .amount-box-and-payNow  .pay-now-button img{
+    width: 2rem;
+    height: 2rem;
+}
+.donate-page .donate-box  .amount-box-and-payNow .pay-now-button h3{
+
+    margin: 0.2rem 0;
+}
+
+    
+.donate-page .donate-box  .amount-box-and-payNow .pay-now-button p{
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width:768px) and (min-width:600px){
+    .navbar{
+        padding: 0 1rem;
+    }
+
+    main .content .donation-boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    footer .image-email{
+        margin-left: 2rem;
+    }
+
+    footer .spark{
+        margin-left: 4rem;
+    }
+}
+
+@media screen and   (max-width:600px){
+    .navbar{
+        padding: 0 1rem;
+    }
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .login-account-button{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    main .content .donation-boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    footer .image-email{
+        margin-left: 2rem;
+    }
+
+    footer .spark{
+        margin-left: 4rem;
+    }
+
+    
+}
+
+@media screen and (max-width:400px) {
+    main .content .donation-boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+        padding: 0;
+    }
+
+    main .content{
+        padding: 1rem 0rem;
+    }
+
+    .sign-up-form form{
+        width: 250px;
+    }
+}
+
