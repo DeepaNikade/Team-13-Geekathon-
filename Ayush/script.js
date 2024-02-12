@@ -61,7 +61,7 @@ login_signup_button.addEventListener("click" , (e) => {
         let account_button_small = login_signup_button.childNodes[7].childNodes[5].childNodes[7].childNodes[3].childNodes[3];
         
         if(account_button_small.style.display === "flex"){
-            account_button.style.display = "none";
+            account_button_small.style.display = "none";
         }
         else{
             account_button_small.style.display = "flex";
