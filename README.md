@@ -45,8 +45,8 @@ Responsive Design: The application will be responsive and accessible across vari
 -Parwinder Singh Batra
 >This is a Trello clone project built with JavaScript. It allows users to create boards, lists, and cards to manage their tasks and projects.
 
-## Demo
-Live Demo :- .
+### Demo
+Live Demo : [Click Here](https://parwindersinghbatra.github.io/TrelloClone/).
 
 -Features
 - **Boards:** Create, and delete boards.
