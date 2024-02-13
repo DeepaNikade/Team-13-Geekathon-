@@ -87,3 +87,6 @@ function addCard(index) {
 function showCardDetails(cardContent) {
   alert(`Card Details: ${cardContent}`);
 }
+
+
+abcddd
