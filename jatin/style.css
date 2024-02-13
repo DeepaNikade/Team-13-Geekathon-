@@ -1,94 +1,140 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .container {
-    position: relative;
-    border-radius: 10px; /* Adjust the border radius as needed */
-    border: 1px solid #ccc; /* Add border for the container */
-    padding: 50px; /* Add padding to create space for the rounded corners */
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #ccc; 
+  padding: 50px; 
 }
 .container h1 {
-    text-align: center;
+  text-align: center;
 }
-  
-  /* Apply styles to headings */
-   h2 {
-    margin-bottom: 10px;
-  }
+h2 {
+  margin-bottom: 10px;
+}
 
 .invoice-details {
-    position: absolute;
-    top: 10px;
-    right: 5px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
 }
 
 .invoice-date {
-    position: absolute;
-    top: 1px;
-    left: 5px;
+  position: absolute;
+  top: 1px;
+  left: 5px;
 }
-  /* Apply styles to input elements */
-  input[type="text"],
-  input[type="number"] {
-    margin-bottom: 10px;
-    width: auto;
-    padding: 5px;
-    font-size: 15px;
-  }
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  margin-bottom: 10px;
+  width: auto;
+  padding: 5px;
+  font-size: 15px;
+}
+.invoice-details {
+  margin-bottom: 20px;
+}
+.company-info,
+.customer-info {
+  margin-bottom: 20px;
+}
   
-  /* Apply styles to invoice details section */
-  .invoice-details {
-    margin-bottom: 20px;
-  }
-  
-  /* Apply styles to company and customer sections */
-  .company-info,
-  .customer-info {
-    margin-bottom: 20px;
-  }
-  
-  /* Apply styles to item rows */
-  .item-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
-    align-items:flex-end;
-  }
-  
-  /* Apply styles to subtotal and tax sections */
-  .subtotal,
+.item-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  align-items:flex-end;
+}
+.subtotal,
   .tax {
     margin-top: 10px;
   }
-  
-  /* Apply styles to buttons */
-  /* button {
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-  } */
-  
-  
-  /* Apply styles to subtotal and total amounts */
   #subtotalAmount,
   #taxAmount,
   #totalAmount {
     font-weight: bold;
   }
-  
-  button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
+}
+@media screen and (max-width: 480px ) {
+  .container {
+      padding: 10px;
+  }
+  /* .invoice-details, */
+  /* .invoice-date, */
+  .customer-info,
+  .company-info,
+  #itemsContainer,
+  .subtotal,
+  .tax,
+  #totalAmount,
+  #reviewInvoiceSection {
+      width: 100%;
+  }
+  .invoice-date,
+  .invoice-details {
+      display: none;
+  }
+  .item-row {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .item-row > div {
+      padding: 5px;
+  }
+  input[type="text"],
+  input[type="number"] {
+      width: calc(100% - 10px);
+      margin-bottom: 5px;
+  }
+  button {
+      width: 100%;
+      margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 830px ) {
+  .container {
+      padding: 10px;
+  }
+  .customer-info,
+  .company-info,
+  #itemsContainer,
+  .subtotal,
+  .tax,
+  #totalAmount,
+  #reviewInvoiceSection {
+      width: 100%;
+  }
+  .invoice-date,
+  .invoice-details {
+      display: none;
+  }
+  .item-row {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .item-row > div {
+      padding: 5px;
+  }
+  input[type="text"],
+  input[type="number"] {
+      width: calc(100% - 10px);
+      margin-bottom: 5px;
+  }
+  button {
+      width: 100%;
+      margin-bottom: 5px;
+  }
 }
