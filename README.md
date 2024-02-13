@@ -29,7 +29,7 @@ Real-time payment status updates and notifications.
 - Features
 Simple Interface: Intuitive user interface for easy input and management of invoice details. Customizable Templates: Pre-designed invoice templates with options to customize colors, fonts, and branding. Automatic Calculation: Automatic calculation of subtotal, taxes, discounts, and total amount based on input values. Save and Edit: Option to save and edit invoices for future reference or modifications. Responsive Design: Responsive layout for seamless user experience across devices and screen sizes.
 
-## Resume-Template Project README
+## Resume-Template Project 
 -Ansh
 >This project aims to develop a user-friendly application for creating and managing resumes efficiently. The Resume Maker will provide users with a simple interface to input their personal and professional information, choose from various resume templates, and generate professional-looking resumes.
 
