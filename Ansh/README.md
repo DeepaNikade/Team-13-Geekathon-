@@ -29,6 +29,7 @@ This project aims to develop a user-friendly application for creating and managi
 
 ## Contributing
 Contributions to the project are welcome! Feel free to fork the repository, make changes, and submit pull requests. Please ensure adherence to coding standards and practices.
+Go through the Hosted Link : https://ansh8955.github.io/Resume-Template/
 
 ## Contact
 For any inquiries or issues, please contact [upadhyayaansh094@gmail.com].
