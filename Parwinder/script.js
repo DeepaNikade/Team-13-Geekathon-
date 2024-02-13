@@ -72,21 +72,31 @@ function addCard(index) {
 
   if (cardName) {
     const card = document.createElement("div");
-    card.className = "card";
-    card.draggable = true;
-    card.textContent = cardName;
+    const carddelete = document.createElement("div")
 
+    card.className = "card";
+    carddelete.className="cardx"
+    carddelete.innerHTML = "X"
+    card.draggable = true;
+
+    card.append(cardName)
+    cardsContainer.append(carddelete);
+
+    carddelete.addEventListener("click", () =>{
+      carddelete.remove()
+      card.remove()
+
+    })
     card.onclick = function() {
       showCardDetails(cardName);
     };
 
     cardsContainer.appendChild(card);
+
+    
   }
 }
 
 function showCardDetails(cardContent) {
   alert(`Card Details: ${cardContent}`);
 }
-
-
-abcddd
