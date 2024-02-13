@@ -154,7 +154,7 @@ donation_boxes.addEventListener("click" , (e) => {
         donate_page.style.display = "flex"; 
         donate_page_heading.innerText =  e.target.parentNode.childNodes[3].innerText;     
     }
-    else{
+    else if(e.target.innerText === "Donate" && logged_In === false){
         alert("Login First");
     }
 });
