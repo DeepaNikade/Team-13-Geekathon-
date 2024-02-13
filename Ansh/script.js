@@ -30,6 +30,7 @@ const phoneDIV = document.querySelector(".phoneDiv");
 const cityDIV = document.querySelector(".locationDiv");
 
 const summaryDIV = document.querySelector(".summary");
+const summaryDIV2 = document.querySelector(".summary2");
 
 
 const  projectDiv = document.querySelector(".projectDIV");
@@ -90,14 +91,27 @@ const projectContainer  = document.querySelector(".projectcontainer");
 const eduContainer  = document.querySelector(".educontainer");
 
 const profExp = document.querySelector(".profexp");
+const profExp2 = document.querySelector(".profexp2");
 const projectDisp = document.querySelector(".projectdisp");
+const projectDisp2 = document.querySelector(".projectdisp2");
 const eduDisp = document.querySelector(".edudisp");
+const eduDisp2 = document.querySelector(".edudisp2");
 
 colorContainer = document.querySelector(".colorcontainer");
+colorContainer2 = document.querySelector(".colorcontainer2");
+
+ const mail2 = document.querySelector(".mail-2");
+ const phone2 = document.querySelector(".phone-2");
+ const location2 = document.querySelector(".location-2");
+
+
 
 let expdata;
+let expdata2;
 let projectdata;
+let projectdata2;
 let edudat;
+let edudat2;
 
 let flag = false;
 let flagMinimal = false;
@@ -122,7 +136,7 @@ Type.addEventListener("click", (e) => {
     displayInfo.style.display = "none";
     displayInfo2.style.display = "block";
 
-    displayFunctionTwo_Column2();
+    displayFunctionMinimalist()
 
     
     
@@ -218,7 +232,7 @@ function displayFunctionTwo_Column2(){
 function displayFunctionMinimalist(){
 
 
-    colorContainer.innerHTML = "";
+    // colorContainer2.innerHTML = "";
     // console.log("bye");
 
     let colorDIV = document.createElement("div");
@@ -234,67 +248,72 @@ function displayFunctionMinimalist(){
     <p class="summarypara"></p>`
 
     colorDIV.innerHTML = `
-    <p class="inputName">"HI"</p>
-    <p class="jobClass"></p>
+    <p class="inputName2"></p>
+    <p class="jobClass2"></p>
     `
-    colorContainer.appendChild(colorDIV);
+    colorContainer2.appendChild(colorDIV);
 
-    // console.log(colorContainer);
+    
 
 
-    let name = document.querySelector(".inputName");
-    let job = document.querySelector(".jobClass");
-    let Mail = document.querySelector(".mail");
-    let Phone = document.querySelector(".phone");
-    let City = document.querySelector(".location");
-    let summary = document.querySelector(".summarypara");
-    let skill = document.querySelector(".skillpara");
+    // let name = document.querySelector(".inputName");
+    let inputName2 = document.querySelector(".inputName2");
+    // let job = document.querySelector(".jobClass");
+    let job2 = document.querySelector(".jobClass2");
+    // let Mail = document.querySelector(".mail");
+    // let Phone = document.querySelector(".phone");
+    // let City = document.querySelector(".location");
+    let summaryPara2 = document.querySelector(".summarypara2");
+    let skillPara2 = document.querySelector(".skillpara2");
 
     inputColor.addEventListener("input", (e) => {
         let colorChange = e.target.value;
   
-        colorDIV.style.backgroundColor = colorChange;
+        colorContainer2.style.backgroundColor = colorChange;
       });
   
 
-    colorDIV.style.backgroundColor ="red";
+    // colorDIV.style.backgroundColor ="red";
 
-    console.log(colorDIV);
+    // console.log(colorDIV);
 
     InputName.addEventListener("input",(e)=>{
-        name.innerHTML =e.target.value;
+        inputName2.innerHTML =e.target.value;
      });
 
      jobInput.addEventListener("input",(e)=>{
-        job.innerHTML =e.target.value;
+        job2.innerHTML =e.target.value;
     });
 
     emailInput.addEventListener("input",(e)=>{
-        Mail.innerHTML =e.target.value;
+        mail2.innerHTML =e.target.value;
     
     });
     phoneInput.addEventListener("input",(e)=>{
-        Phone.innerHTML =e.target.value;
+        phone2.innerHTML =e.target.value;
     });
     cityInput.addEventListener("input",(e)=>{
-        City.innerHTML =e.target.value;
+        location2.innerHTML =e.target.value;
     });
 
     professionalSummaryInput.addEventListener("input",(e)=>{
-        summaryDIV.setAttribute("class","summaryDivClass");
-        summary.innerHTML =e.target.value;
+        summaryDIV2.setAttribute("class","summaryDivClass");
+        summaryPara2.innerHTML =e.target.value;
     });
 
 
     skillsInput.addEventListener("input",(e)=>{
-        skill.innerHTML =e.target.value;
+        skillPara2.innerHTML =e.target.value;
     });
 
     headerTextColorInput.addEventListener("input", (e) => {
         let colorChange = e.target.value;
   
-        name.style.color = colorChange;
-        job.style.color = colorChange;
+        inputName2.style.color = colorChange;
+        job2.style.color = colorChange;
+        phone2.style.color = colorChange;
+        location2.style.color = colorChange;
+        mail2.style.color = colorChange;
   
       });
    
@@ -348,6 +367,27 @@ newDiv.setAttribute("class","employDivClass");
 
     expdata = displayDiv;
 
+// ********************************************************************2
+    let displayDiv2 = document.createElement('div');
+
+    displayDiv2.setAttribute("class","experience");
+    // displayDiv.setAttribute("id", count);
+
+    displayDiv2.innerHTML = `
+    <div class="profexp2">
+
+    </div>
+    <p class="startdatepara2"></p>
+    <p class="enddatepara2"></p>
+    <p class="jobtitlepara2"></p>
+    <p class="employerpara2"></p>
+    <p class="descriptionpara2"></p>
+    `
+
+    profExp2.appendChild(displayDiv2);
+
+    expdata2 = displayDiv2;
+
 });
 
 projectBTN.addEventListener('click',(e)=>{
@@ -381,6 +421,26 @@ newDiv.setAttribute("class","employDivClass");
     projectDisp.appendChild(displayDiv);
 
     projectdata = displayDiv;
+
+
+    // **********************************************************
+
+
+
+    let displayDiv2 = document.createElement('div');
+
+    displayDiv2.setAttribute("class","projectDIV");
+
+    displayDiv2.innerHTML = `
+    <p class="projectstartdatepara2"></p>
+    <p class="projectenddatepara2"></p>
+    <p class="projectitle2"></p>
+    <p class="projecttitledescpara2"></p>
+    `
+
+    projectDisp2.appendChild(displayDiv2);
+
+    projectdata2 = displayDiv2;
     
 });
 
@@ -425,6 +485,30 @@ newDiv.setAttribute("class","educationDIV");
 
 
 edudat = displayDiv;
+
+// *******************************************************************
+
+
+    let displayDiv2 = document.createElement('div');
+
+    displayDiv2.setAttribute("class","educatediv");
+
+    displayDiv2.innerHTML = `
+    <p class="edustartdatepara2"></p>
+    <p class="eduenddatepara2"></p>
+    <p class="eduqualification2"></p>
+    <p class="educollege2"></p>
+    <p class="edudesc2"></p>
+    `
+
+    eduDisp2.appendChild(displayDiv2);
+
+    
+
+// educationDIV.setAttribute("class","employDivClass");
+
+
+edudat2 = displayDiv2;
 });
 
 function getStartdate(e){
@@ -432,6 +516,7 @@ function getStartdate(e){
     
     
     expdata.childNodes[3].innerText = e.value;
+    expdata2.childNodes[3].innerText = e.value;
 
     console.log(expdata.childNodes);
 
@@ -439,6 +524,7 @@ function getStartdate(e){
 function projectgetStartdate(e){
 
     projectdata.childNodes[1].innerText = e.value;
+    projectdata2.childNodes[1].innerText = e.value;
 
 }
 
@@ -446,6 +532,7 @@ function projectgetStartdate(e){
 function edugetStartdate(e){
 
     edudat.childNodes[1].innerText = e.value;
+    edudat2.childNodes[1].innerText = e.value;
 
 }
 
@@ -454,11 +541,13 @@ function edugetStartdate(e){
 function getEnddate(e){
 
     expdata.childNodes[5].innerText = e.value;
+    expdata2.childNodes[5].innerText = e.value;
 
 }
 function projectgetEnddate(e){
 
     projectdata.childNodes[3].innerText = e.value; 
+    projectdata2.childNodes[3].innerText = e.value; 
 
 }
 
@@ -466,6 +555,7 @@ function projectgetEnddate(e){
 function edugetEnddate(e){
 
     edudat.childNodes[3].innerText = e.value;
+    edudat2.childNodes[3].innerText = e.value;
  
 
 }
@@ -475,26 +565,31 @@ function edugetEnddate(e){
 function jobtitle(e){
 
     expdata.childNodes[7].innerText = e.value;
+    expdata2.childNodes[7].innerText = e.value;
 
     // return e.value;
 }
 function employer(e){
 
     expdata.childNodes[9].innerText = e.value;
+    expdata2.childNodes[9].innerText = e.value;
 
 }
 function descp(e){
 
     expdata.childNodes[11].innerText = e.value;
+    expdata2.childNodes[11].innerText = e.value;
 
 }
 function projecttitle(e){
 
     projectdata.childNodes[5].innerText = e.value;
+    projectdata2.childNodes[5].innerText = e.value;
 
 }
 function projectDesc(e){
    projectdata.childNodes[7].innerText = e.value;
+   projectdata2.childNodes[7].innerText = e.value;
 
 }
 
@@ -504,6 +599,7 @@ function projectDesc(e){
 function qualification(e){
 
     edudat.childNodes[5].innerText = e.value;
+    edudat2.childNodes[5].innerText = e.value;
 
 
 }
@@ -511,12 +607,14 @@ function college(e){
     console.log(edudat.childNodes)
 
     edudat.childNodes[7].innerText = e.value;
+    edudat2.childNodes[7].innerText = e.value;
 
 
 }
 function edudesc(e){
 
     edudat.childNodes[9].innerText = e.value;
+    edudat2.childNodes[9].innerText = e.value;
 
 
 }
