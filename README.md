@@ -41,4 +41,18 @@ Export Options: Ability to export the generated resume in different formats such
 Customization: Users can customize the layout, fonts, colors, and sections of their resumes according to their preferences.
 Responsive Design: The application will be responsive and accessible across various devices and screen sizes.
 
+## Trello-Clone Project 
+-Parwinder Singh Batra
+>This is a Trello clone project built with JavaScript. It allows users to create boards, lists, and cards to manage their tasks and projects.
 
+## Demo
+Live Demo :- .
+
+-Features
+- **Boards:** Create, and delete boards.
+- **Lists:** Add and remove lists within a board.
+- **Cards:** Manage tasks with cards, including adding, and deleting.
+- **Drag-and-Drop:** Intuitive drag-and-drop functionality for cards.
+  
+-Technologies Used
+- HTML/CSS and JavaScript
