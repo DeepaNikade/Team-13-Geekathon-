@@ -229,6 +229,7 @@ button{
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
+    z-index:3;
 }
 
 hr{
@@ -323,6 +324,11 @@ margin-top: 4px;
 
 .mailDiv, .phoneDiv, .locationDiv{
     text-align: none;
+}
+
+.display-info2 {
+    width: 100%;
+
 }
 
 }
