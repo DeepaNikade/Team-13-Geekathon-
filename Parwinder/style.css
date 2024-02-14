@@ -8,9 +8,8 @@ body {
 }
 #app{
   display:flex;
-  width: 180px;
+  width: auto;
     margin-top: 8px;
-    background-color: #ebecf0;
     border-radius: 4px;
     padding: 8px;
 }
@@ -28,7 +27,7 @@ body {
 }
 .divs {
   margin-top:8px;
-  width:350px;
+  width:200px;
   padding:4px;
   margin-top:4px;
 }
@@ -119,7 +118,6 @@ body {
   
 /* CSS */
 .AddboardClass {
-  appearance: none;
   backface-visibility: hidden;
   background-color: #2f80ed;
   border-radius: 10px;
@@ -148,7 +146,6 @@ body {
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
-  
 }
 
 .AddboardClass:hover {
