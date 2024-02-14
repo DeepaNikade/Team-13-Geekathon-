@@ -23,7 +23,7 @@ body {
 .board {
   display: flex;
   width: auto;
-  height:fit-content
+  height:fit-content;
 }
 .divs {
   margin-top:8px;
@@ -41,8 +41,10 @@ body {
   box-shadow: none;
 }
 .deletefun{
-  display:inline;
-  border:1px solid black;
+  float:right;
+}
+.deletefun:hover{
+  color:red;
 }
 .headingvalue{
   display:inline-block;

@@ -50,22 +50,27 @@ function addData(InputTypeValue, addBoardValue) {
   addBoard.style.display= 'block';
   const board = document.getElementById("board");
   const list = document.createElement("div");
-  const deletefun = document.createElement("span")
+  const deletefun = document.createElement("div")
 
   list.className = "list";
   list.id = "list-" + listIndex;
-  
+  deletefun.className = "deletefun"
+
   list.innerHTML = `
-  
+  <div class="deletefun" id="deletefun" onclick=deletefuns(${listIndex})>X</div>
   <h3 class='headingvalue'>${InputTypeValue.value} </h3>
+
       <div id="cards-${listIndex}" draggable="true" class='cardMovable'> </div>
     <div class="add-card-button" onclick="addCard(${listIndex},'list')">Add Card</div>
-    
   `;
-  board.appendChild(list);
-  listIndex++;
-}
 
+  board.appendChild(list);
+  listIndex++; 
+}
+function deletefuns(cardnames){
+  const x = document.getElementById("list-"+cardnames)
+  x.remove()
+  }
 // function adddetails(index,listname)
 // {
 //   const listnames = listname
