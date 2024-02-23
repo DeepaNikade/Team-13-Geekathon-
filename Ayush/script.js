@@ -102,7 +102,8 @@ sign_up_form_close.addEventListener("click" , () => {
 
 
 
-form_Submit_Button.addEventListener("click" , () => {
+form_Submit_Button.addEventListener("click" , (e) => {
+    e.preventDefault();
     logged_In = true;
 
     firstName = document.querySelector("#firstName").value;
